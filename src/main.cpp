@@ -2,11 +2,16 @@
 #include <iostream>
 #include <math.h>
 
-int main()
+int main(int argc , char** argv)
 {
-    int a=10;
-    a++;
-    ROS_INFO_STREAM("begining of the end:");
-    ROS_INFO_STREAM(a);
+    ros::init(argc,argv,"cip_node");
+    ros::start();
+    ros::NodeHandle nh;
+
+
+
+    ros::spin();
+    ros::shutdown();
+    return 0;
 
 }
